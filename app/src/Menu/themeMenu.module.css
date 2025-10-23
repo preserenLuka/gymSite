@@ -1,0 +1,242 @@
+:root {
+  --tm-border: rgba(255, 255, 255, 0.12);
+  --tm-border-soft: rgba(255, 255, 255, 0.08);
+  --tm-bg: rgba(22, 24, 28, 0.95);
+  --tm-backdrop: rgba(8, 10, 14, 0.55);
+  --tm-radius: 16px;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: var(--tm-backdrop);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+}
+
+.modal {
+  width: min(960px, 96vw);
+  height: min(70vh, 720px);
+  background: var(--tm-bg);
+  color: #fff;
+  border: 1px solid var(--tm-border);
+  border-radius: var(--tm-radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--tm-border-soft);
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.close {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.close:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  min-height: 0; /* za pravilno overflow obnašanje */
+  flex: 1;
+}
+
+/* LEFT: themes list */
+.sidebar {
+  border-right: 1px solid var(--tm-border-soft);
+  min-height: 0;
+  overflow: auto;
+}
+
+.themeList {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  display: grid;
+  gap: 6px;
+}
+
+.themeItem {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--tm-border-soft);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.themeItem:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--tm-border);
+}
+.themeItemActive {
+  outline: 2px solid #ffffff40;
+}
+.themeItemCurrent {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--tm-border);
+}
+
+.themeDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--color-accent, #88c0d0);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12) inset;
+}
+
+.themeText {
+  display: grid;
+}
+.themeName {
+  font-weight: 600;
+}
+.themeSub {
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+/* RIGHT: backgrounds of the active theme */
+.content {
+  padding: 12px;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 12px;
+}
+
+.contentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.currentInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.badge {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  border: 1px solid var(--tm-border-soft);
+  opacity: 0.85;
+}
+
+.bgControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.iconBtn {
+  appearance: none;
+  border: 1px solid var(--tm-border-soft);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border-radius: 8px;
+  width: 34px;
+  height: 30px;
+  cursor: pointer;
+}
+.iconBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bgIndex {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.bgGrid {
+  list-style: none;
+  margin: 0;
+  padding: 1%;
+  min-height: 0;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.bgCell {
+}
+
+.bgThumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  border: 1px solid var(--tm-border-soft);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+}
+.bgThumb:hover {
+  border-color: var(--tm-border);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
+}
+.bgThumbActive {
+  outline: 2px solid #ffffff50;
+  outline-offset: 2px;
+}
+
+.bgPreview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 1px;
+}
+
+.help {
+  font-size: 12px;
+  opacity: 0.85;
+  border-top: 1px solid var(--tm-border-soft);
+  padding-top: 8px;
+}
+
+kbd {
+  font-family: inherit;
+  border: 1px solid var(--tm-border);
+  border-bottom-width: 2px;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+}

@@ -1,0 +1,134 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(8, 10, 14, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+}
+
+.modal {
+  width: min(480px, 92vw);
+  height: min(46vh, 480px);
+  background: rgba(22, 24, 28, 0.95);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  outline: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.close {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.close:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.body {
+  padding: 10px 14px 14px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.item {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+}
+.item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.itemActive {
+  outline: 2px solid #ffffff40;
+}
+.itemCurrent {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.itemLabel {
+  font-weight: 500;
+}
+.currentBadge {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  opacity: 0.9;
+}
+
+.help {
+  font-size: 12px;
+  opacity: 0.85;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+kbd {
+  font-family: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom-width: 2px;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+}
+.item {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+.itemIcon {
+  display: grid;
+  place-items: center;
+  opacity: 0.9;
+}
