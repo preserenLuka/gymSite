@@ -29,5 +29,11 @@ Create and explore **notes**, **videos**, and **tags** — all with switchable v
 
 ---
 
-## File Structure
+## Thenes
+
+<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/1700ce7e-3b5c-49ce-84c9-c27ac758fc06" />
+<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/893b2107-8f75-4689-8c8d-1c31a04657ee" />
+
+
+
 
