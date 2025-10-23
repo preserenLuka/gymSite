@@ -18,7 +18,7 @@
 }
 
 .modal {
-  width: min(960px, 96vw);
+  width: min(980px, 96vw);
   height: min(70vh, 720px);
   background: var(--tm-bg);
   color: #fff;

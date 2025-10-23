@@ -72,4 +72,53 @@ export const themes: Theme[] = [
       "/backgrounds/nord/11-nord-bg.png",
     ],
   },
+  {
+    id: "ristretto",
+    name: "Ristretto",
+    colors: {
+      // deep roasted browns + warm orange accents (city + orange moon vibe)
+      bg: "rgba(28, 16, 10, 0.90)", // near-black brown
+      bgSecondary: "rgba(40, 24, 16, 0.94)", // a touch warmer/lighter
+      text: "#F2E6D8", // warm ivory
+      textSecondary: "#D1B8A0", // muted latte
+      accent: "#E07A3F", // burnt orange (CTA, focus, sliders)
+      border: "#3A2415", // dark coffee outline
+    },
+    typography: {
+      fontFamily: "'JetBrains Mono', monospace",
+      fontWeight: { normal: 400, medium: 500, bold: 700 },
+      fontSize: { base: "15px", sm: "13px", lg: "17px", xl: "22px" },
+    },
+    backgrounds: [
+      "/backgrounds/ristretto/1-ristretto-bg.jpg", // ← your orange city image
+      "/backgrounds/ristretto/2-ristretto-bg.jpg",
+      "/backgrounds/ristretto/3-ristretto-bg.jpg",
+    ],
+  },
+
+  {
+    id: "matte-black",
+    name: "Matte Black",
+    colors: {
+      // ultra-dark, low-gloss with soft neutral accents (black water texture vibe)
+      bg: "rgba(6, 6, 7, 0.88)", // matte near-black
+      bgSecondary: "rgba(14, 14, 16, 0.94)", // slightly lifted panel
+      text: "#EAEAEA", // neutral light gray
+      textSecondary: "#B7B7B7", // softer gray
+      accent: "#98defeff", // icy cyan pop (easy to swap)
+      border: "#242426", // subtle graphite
+    },
+    typography: {
+      fontFamily: "'JetBrains Mono', monospace",
+      fontWeight: { normal: 400, medium: 500, bold: 600 },
+      fontSize: { base: "16px", sm: "14px", lg: "18px", xl: "24px" },
+    },
+    backgrounds: [
+      "/backgrounds/matte-black/1-matte-black-bg.jpg", // ← your black waves image
+      "/backgrounds/matte-black/2-matte-black-bg.jpg",
+      "/backgrounds/matte-black/3-matte-black-bg.jpg",
+      "/backgrounds/matte-black/4-matte-black-bg.jpg",
+      "/backgrounds/matte-black/5-matte-black-bg.jpg",
+    ],
+  },
 ];

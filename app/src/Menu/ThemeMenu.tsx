@@ -118,7 +118,6 @@ export default function ThemeMenu({ open, onClose }: Props) {
             ×
           </button>
         </header>{" "}
-        asda(safafsa)
         <div className={s.layout}>
           {/* SEZNAM TEM */}
           <aside className={s.sidebar}>
